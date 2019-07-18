@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Comparisons - Getting Started with Javascript</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+ 
+
+  <script>
+  
+    const original = 'nathan';
+    const clone    = 'NATHAN';
+
+    console.groupCollapsed('String');
+      console.log(original == 'nathan'); // true
+      console.log(original == clone); // false - JS is case sensitive when doing comparisons
+      console.log(original == clone.toLowerCase()); // true
+    console.groupEnd();
+
+    const num1 = 10;
+    const num2 = '10';
+
+    console.groupCollapsed('Numbers');
+      console.log(num1 == num2); // true ** two equal signs means 'are they equal' and 'allow cohersion (change to string, etc.)
+      console.log(num1 === num2); // false ** two equal signs means 'are they equal' and 'that their type is the same (no cohersion)'
+      console.log(num1 != num2); // false - != is not equal to but with cohersion
+      console.log(num1 !== num2); // true != is not equal to without cohersion
+    console.groupEnd();
+
+    let what; // undefined
+    let thing = null; 
+
+    console.groupCollapsed('Booleans');
+      console.log(Boolean(original)); // true - original is true because it has a value
+      console.log(Boolean(what)); // false - undefined is false 
+      console.log(Boolean(thing)); // false - null is false
+      console.log(Boolean({})); // true - an empty object evaluates as true in JS
+      console.log(Boolean([])); // true - an empty array evaluates as true in JS
+    console.groupEnd();
+
+    const firstArr = [1, 2, 3];
+    const secondArr = [1, 2, 3];
+    const firstObj = { color: 'red' };
+    const secondObj = { color: 'red' };
+
+    console.group('Objects and Arrays');
+      console.log(firstArr == secondArr); // false - matching arrays or objects will not be equal, even with ===
+      console.log(firstObj == secondObj); // false 
+    console.groupEnd();
+
+    // && = and 
+    // || = or
+
+    console.group('And Or');
+      console.log(Boolean('blah') && Boolean('thing')); // true - both have to be true for the entire statement to be true
+      console.log(Boolean('blah') && Boolean('')); // false
+      console.log(Boolean('blah') || Boolean('')); // true - if one is true, the entire statement is true
+      console.log(Boolean('') || Boolean('')); // false - if both are false, the entire statement is false
+    console.groupEnd();
+  </script>
+
+</body>
+
+</html>
