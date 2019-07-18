@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Operators - Getting Started with Javascript</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+ 
+
+  <script>
+  
+  // Operators
+  // addition, subtraction, division, multiplication, incrementing, decrementing
+  let a = 10,
+      b = 3,
+      c = 15; 
+  let d = '5',
+      e = 'my name',
+      f = 'is Nathan';
+
+  // addition
+  console.groupCollapsed('Addition')
+    console.log(a + b); // 13
+    console.log(a + c); // 25
+    console.log(e + f); // my nameis Nathan
+    console.log(e + ' ' + f); // my name is Nathan   
+    console.log(a + d); // 105 - creates a string of the two variables
+    console.log(e + ' is Batman'); // my name is Batman
+  console.groupEnd();
+
+  // subtraction
+  console.groupCollapsed('Subtraction')
+    console.log(a - b); // 7
+    console.log(a - c); // -5
+  console.groupEnd();
+
+  // multiplication 
+  console.groupCollapsed('Multiplication')
+    console.log(a * 3); // 30
+    console.log(a * b); // 30
+    console.log(b * c); // 45
+  console.groupEnd();
+
+  // incrementing
+  console.group('Incrementing');
+    console.log(a + 1); //
+    console.log(a++); // increment a / change 'a' to 11 
+    console.log(c += a); // add a to c and change c to that sum of 26
+  console.groupEnd();
+
+  a++; 
+  ++a; 
+  b--; 
+  --b; 
+  c += a; 
+  // also works with strings 
+  e += f; 
+  console.log(e);
+
+
+
+
+
+  </script>
+
+</body>
+
+</html>

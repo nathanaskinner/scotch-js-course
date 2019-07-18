@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Types and Variables - Getting Started with Javascript</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+ 
+
+  <script>
+    // strings
+    'this is my string';
+    'my second string';
+    "a third string with double quotes";
+
+    // numbers 
+    // numbers are considered 'floats', meaning they are decimals
+    10; // = 10.0
+    500;
+    3.14;
+
+    // booleans (truthy / falsy)
+    true; 
+    false;
+    //console.log(Boolean(''));
+
+    // specials
+    undefined; 
+    //let user = 'nathan'; 
+    //console.log(user);
+    null; 
+    //let nathan = null;
+    NaN; //not a number
+
+    // objects
+    const user = {
+      name: 'Nathan', // key/value pairs
+      username: 'nachonathan'
+    };
+
+    // arrays 
+    const users = ['nathan', 'kenn', 'kamran'];
+
+    //console.log(user.name);
+    //objects are accessed by the variable.key
+
+    //console.log(users[0]);
+    //arrays are number delimited, starting at 0, accessed with square brackets
+
+    const luckyNumbers = [1, 43, 54, 132];
+    const whatever = ['string', 24, 'another string'];
+
+    // array with objects
+    const superUsers = [
+      { name: 'Chris' },
+      { name: 'Nick' },
+      { name: 'Holly' }
+    ];
+
+    console.log(superUsers[2].name);
+
+    // declaring variables
+    var thing         = 'first';
+    const otherThing  = 'second'; // cannot reassign const 
+    let newThing      = 'third';  // can reassign let 
+
+    const thisThing   = {
+      name: 'Nathan'
+    };
+
+    thisThing.name = 'Nacho';
+
+    //=============================================
+
+    let myVariable; 
+
+    myVariable = 'something';
+
+
+  </script>
+
+</body>
+
+</html>
