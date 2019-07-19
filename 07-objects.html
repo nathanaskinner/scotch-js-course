@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Getting Started with Javascript</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+
+  <!-- https://scotch.io/courses/getting-started-with-javascript-for-web-development/ -->
+
+
+  <script>
+    // Everything in JS can become an object
+
+    // object
+    const hero = {
+      name: 'Bruce Wayne', //property
+      alias: 'Batman', //property
+      catchphrase: 'To the Batcave!', //property
+      speak: function () {
+        return 'Attention! ' +
+          this.catchphrase;
+      }, // method - function inside of an object
+      attack: function (sound) {
+        return `(punches bad  guy) ${sound}`;
+      }
+    };
+
+    const thingToLookFor = 'alias';
+
+    //access a property
+    console.log(hero.name); // Bruce Wayne
+    console.log(hero['name']); // Bruce Wayne
+    console.log(hero[thingToLookFor]); //Batman
+
+    //accessing methods (functions)
+
+    console.log(hero.speak());
+    console.log(hero.attack('POWWWWW'));
+
+
+    'this is my string'.toUpperCase(); //string with method
+  </script>
+
+</body>
+
+</html>
