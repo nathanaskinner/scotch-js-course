@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Functions - Getting Started with Javascript</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+
+  <!-- https://scotch.io/courses/getting-started-with-javascript-for-web-development/ -->
+
+  <div class="jumbotron text-center">
+    <button class="btn btn-danger" onclick="(saySomething('this is the first button'))">My Button</button>
+    <button class="btn btn-danger" onclick="(saySomething('this is the second button'))">My 2nd Button</button>
+  </div>
+
+
+  <script>
+    function saySomething(message = 'goodbye', whisper = false) {
+
+      if (whisper) {
+        console.log(`%c${message}`, 'font-size: 5px');
+      } else {
+        console.log(message);
+      }
+    }
+
+    saySomething('hello', true);
+    saySomething('my name is nathan', true);
+    saySomething();
+
+    // function squared(a) {
+    //   return a * a;
+    // }
+
+    // const newSquared = squared(3);
+
+    // console.log(newSquared);
+
+    // functions as values for variables
+
+    // const squared = function (a) {
+    //   return a * a;
+    // }
+
+    // const otherSquared = squared;
+
+    // es6 arrow functions
+
+    const squared = (a) => {
+      return a * a;
+    }
+
+    // hoisting - js will will look through all the function declarations and moved the called function to the top 
+
+    punch();
+
+    // function punch is getting called before the function declaration. 
+
+    //only function declarations get hoisted, not functions as values for variables. 
+
+    function punch() {
+      console.log('punch');
+    }
+  </script>
+
+</body>
+
+</html>
